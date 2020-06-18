@@ -1,17 +1,13 @@
-const analyzer = require('./cards/analyzer');
+console.log("Hello poker.");
 
-testHands = [
-    ["ah", "2h", "3h", "4h", "5h"],
-    ["2h", "2d", "2c", "2s", "3s"],
-    ["2h", "2d", "2c", "3c", "3s"],
-    ["7h", "2h", "3h", "4h", "5h"],
-    ["as", "2h", "3h", "4h", "5h"],
-    ["2h", "2d", "2c", "3c", "4s"],
-    ["2h", "2d", "3d", "3c", "4s"],
-    ["2h", "2d", "3d", "5c", "4s"],
-    ["2h", "9d", "3d", "5c", "4s"],
-];
-
-testHands.forEach(hand => {
-    console.log(analyzer.classify(hand));
-});
+/**
+The steps here will probably be:
+  1 - Load the analyzer and server modules;
+  2 - Startup the server;
+    2.1 - Setup the route(s);
+  3 - Listen...
+    3.1 - Validate input;
+    3.2 - Define winner;
+    3.3 - Reply;
+    3.4 - Keep listening;
+**/
