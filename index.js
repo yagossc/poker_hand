@@ -21,6 +21,7 @@ async function main(){
         console.log("Server up and running. Listenning at 8080");
     }catch(err){
         console.error("Error: "+err.message);
+        process.exit(1);
     }
 }
 

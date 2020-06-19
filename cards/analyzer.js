@@ -57,3 +57,24 @@ function isStraight(handNumbers) {
 
     return false;
 }
+
+// validHand checks if a given five cards hand is valid
+module.exports.validateHand = function(hand){
+    return new Promise(function(resolve, reject){
+
+        let handNumbers = hand.map( card => numbers.indexOf(card.split("")[0]));
+        let handSuits = hand.map( card => suits.indexOf(card.split("")[1]));
+
+        let lengths = hand.map(card => card.split("").length);
+
+        if (handNumbers.some(number => number === -1) || handSuits.some(suit => suit === -1)) {
+            reject("invalid.input");
+        }
+
+        if (lengths.some(length => length < 2) || lengths.some(length => length > 3)) {
+            reject("invalid.input");
+        }
+
+        resolve();
+    });
+}
