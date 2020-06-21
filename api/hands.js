@@ -12,14 +12,13 @@ module.exports.compareHands = async function(req, res, next) {
         await analyzer.validateHand(splitH1);
         await analyzer.validateHand(splitH2);
 
-        h1Class = analyzer.classify(splitH1);
-        h2Class = analyzer.classify(splitH2);
+        let winner = analyzer.rankHands(splitH1, splitH2);
 
-        console.log(h1Class+" "+h2Class+"\n");
-        res.send(h1Class+" "+h2Class+"\n");
+        console.log("Winner: "+winner+"\n");
+        res.send("Winner: "+winner+"\n");
 
     }catch(err){
-        console.error('Error: '+err.message);
+        console.error('Error: '+err);
         next(err);
     }
 }
@@ -38,6 +37,14 @@ async function validateInput(data) {
                 throw new Error('invalid.hand');
             }
             if (data.h2.split(" ").length != 5) {
+                throw new Error('invalid.hand');
+            }
+            if (data.h1.split(" ").some((c1, index, h1) => {
+                if(data.h2.split(" ").some(c2 => c2 == c1)) {
+                    return true;
+                }
+                return false;
+            })) {
                 throw new Error('invalid.hand');
             }
         }catch(err){
