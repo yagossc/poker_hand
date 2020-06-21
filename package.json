@@ -1,30 +1,30 @@
 {
-  "name": "poker_hand",
-  "version": "0.0.1",
-  "description": "A simple poker hands challenge solution",
-  "main": "index.js",
-  "scripts": {
-    "test": "jest --runInBand"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/yagossc/poker_hand.git"
-  },
-  "keywords": [
-    "nodejs",
-    "poker",
-    "musicplayce"
-  ],
-  "author": "yagossc",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/yagossc/poker_hand/issues"
-  },
-  "homepage": "https://github.com/yagossc/poker_hand#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jest": "^26.0.1",
-    "lodash": "^4.17.15",
-    "supertest": "^4.0.2"
-  }
+    "name": "poker_hand",
+    "version": "0.0.1",
+    "description": "A simple poker hands challenge solution",
+    "main": "index.js",
+    "scripts": {
+        "test": "jest --runInBand"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+ssh://git@github.com/yagossc/poker_hand.git"
+    },
+    "keywords": [
+        "nodejs",
+        "poker",
+        "musicplayce"
+    ],
+    "author": "yagossc",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/yagossc/poker_hand/issues"
+    },
+    "homepage": "https://github.com/yagossc/poker_hand#readme",
+    "dependencies": {
+        "express": "^4.17.1",
+        "jest": "^26.0.1",
+        "lodash": "^4.17.15",
+        "supertest": "^4.0.2"
+    }
 }

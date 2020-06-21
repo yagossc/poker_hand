@@ -1,6 +1,10 @@
 /**
    This module does not count jokers
-   as part of a valid poker deck.
+   as part of a valid poker deck. Also,
+   there's some redundancy in this code,
+   breaking the DRY principle, but given
+   the time frame, this is a solution and
+   not an optimal solution.
 **/
 
 // Types of hands values enumeration
