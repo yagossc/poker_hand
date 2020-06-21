@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/yagossc/poker_hand#readme",
   "dependencies": {
-    "jest": "^26.0.1"
+    "express": "^4.17.1",
+    "jest": "^26.0.1",
+    "lodash": "^4.17.15",
+    "supertest": "^4.0.2"
   }
 }

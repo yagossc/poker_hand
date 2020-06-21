@@ -15,7 +15,7 @@ module.exports.compareHands = async function(req, res, next) {
         let winner = analyzer.rankHands(splitH1, splitH2);
 
         console.log("Winner: "+winner+"\n");
-        res.send("Winner: "+winner+"\n");
+        res.json({"winner": winner.join(" ")});
 
     }catch(err){
         console.error('Error: '+err);
