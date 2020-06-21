@@ -8,6 +8,9 @@ const app     = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:true}));
 
+// Middlewares
+const error_middleware = require('../app/errors');
+
 // Routes
 const routes = require("./routes");
 
@@ -25,6 +28,9 @@ module.exports.init = function(){
         server.app = app;
 
         routes.setup(server.app);
+
+        // Setup error middleware
+        server.app.use(error_middleware.handler);
 
         resolve();
 
